@@ -1,3 +1,5 @@
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -6,70 +8,18 @@
         <groupId>SciamTest</groupId>
         <artifactId>SciamTest</artifactId>
         <version>1.0</version>
-        	<dependencies>
-<dependency>
-<groupId>junit</groupId>
-<artifactId>junit</artifactId>
-<version>4.8.1</version>
-<scope>test</scope>
-</dependency>
-</dependencies>
-
-<build>
-<plugins>
-<plugin>
-<artifactId>maven-surefire-plugin</artifactId>
-<version>2.12.4</version>
-<dependencies>
-<dependency>
-<groupId>org.apache.maven.surefire</groupId>
-<artifactId>surefire-junit47</artifactId>
-<version>2.8.1</version>
-</dependency>
-</dependencies>
-<configuration>
-<groups>${test.group}</groups>
-<dryrun>true</dryrun>
-<excludedGroups>${test.exgroup}</excludedGroups>
-</configuration>
-<executions>
-<execution>
-<id>default-test</id>
-<phase>test</phase>
-<goals>
-<goal>test</goal>
-</goals>
-</execution>
-</executions>
-</plugin>
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-failsafe-plugin</artifactId>
-<version>2.12.4</version>
-<dependencies>
-<dependency>
-<groupId>org.apache.maven.surefire</groupId>
-<artifactId>surefire-junit47</artifactId>
-<version>2.12.4</version>
-</dependency>
-</dependencies>
-<configuration>
-<groups>${test.group}</groups>
-<dryrun>true</dryrun>
-<excludedGroups>${test.exgroup}</excludedGroups>
-<includes>
-<include>**/*Test.java</include>
-<include>**/Test*.java</include>
-</includes>
-</configuration>
-<executions>
-<execution>
-<goals>
-<goal>integration-test</goal>
-<goal>verify</goal>
-</goals>
-</execution>
-</executions>
-</plugin>
-</plugins>
+        <dependencies>
+              <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>2.41.0</version>
+    </dependency>
+            <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+            
+    </dependencies>
    </project>
