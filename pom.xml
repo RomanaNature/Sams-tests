@@ -20,7 +20,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     </dependency>
             
     </dependencies>
-    <pluginManagement>
+  
    <plugins>
       <plugin>
          <groupId>org.apache.maven.plugins</groupId>
@@ -28,5 +28,5 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
          <version>2.4.3</version>
       </plugin>
    </plugins>
-</pluginManagement>
+
    </project>
