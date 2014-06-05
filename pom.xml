@@ -12,6 +12,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <artifactId>selenium-java</artifactId>
         <version>2.41.0</version>
     </dependency>
+    <dependency>
+	<groupId>org.seleniumhq.selenium</groupId>
+	<artifactId>selenium-firefox-driver</artifactId>
+	<version>2.41.0</version>
+</dependency>
             <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
