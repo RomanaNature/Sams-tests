@@ -66,13 +66,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <goals>
           <goal>exec</goal>
         </goals>
-    
+       </execution>
         <configuration>
           <classpathScope>test</classpathScope>
           <executable>java</executable>
          
         </configuration>
-      </execution>
+   
   
     
       
