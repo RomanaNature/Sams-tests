@@ -45,28 +45,34 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
 
  <build>
-		<plugins>
-		
-			<plugin>
-  <groupId>org.codehaus.mojo</groupId>
-  <artifactId>build-helper-maven-plugin</artifactId>
-  <version>1.1</version>
-  <executions>
-    <execution>
-      <id>add-source</id>
-      <phase>generate-sources</phase>
-      <goals>
-        <goal>add-source</goal>
-      </goals>
-      <configuration>
-        <sources>
-          <source>src/java/core</source>
-          <source>src/java/gen</source>
-        </sources>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
-	</plugins>
+ <plugins>
+		<plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>exec-maven-plugin</artifactId>
+      <version>${exec-maven-plugin.version}</version>
+ 
+      <executions>
+      <!-- Generate DSL reports for product managers -->
+      <!-- This is done first because a test failure will halt the whole process and this would never happen -->
+      <execution>
+        <id>generate dsl report</id>
+        <phase>integration-test</phase>
+        <goals>
+          <goal>exec</goal>
+        </goals>
+ 
+        <configuration>
+          <classpathScope>test</classpathScope>
+          <executable>java</executable>
+         
+        </configuration>
+      </execution>
+        <!-- This executes the cucumber tests using Quickstep -->
+                <id>Execute Cucumber tests</id>
+          <phase>integration-test</phase>
+          <goals>
+            <goal>java</goal>
+          </goals>
+          </plugins>
 	</build>
 	    </project>
