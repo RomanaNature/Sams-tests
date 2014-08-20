@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.Select;
 
-public class Firefox {
+public class Purchase {
 	private WebDriver driver;
 	private StringBuffer verificationErrors = new StringBuffer();
 	private int ran;
@@ -32,7 +32,7 @@ public class Firefox {
 	}
 
 	@Test
-	public void testFirefox() throws Exception {
+	public void testPurchase() throws Exception {
 		// driver.get(baseUrl +
 		// "/store/subscribe/scientific-american-digital/?responseKey=");
 		driver.manage().window().maximize();
