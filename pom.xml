@@ -67,12 +67,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
          
         </configuration>
       </execution>
-        <!-- This executes the cucumber tests using Quickstep -->
-                <id>Execute Cucumber tests</id>
-          <phase>integration-test</phase>
-          <goals>
-            <goal>java</goal>
-          </goals>
+              
           </plugins>
 	</build>
 	    </project>
