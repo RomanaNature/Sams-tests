@@ -61,7 +61,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
       <configuration>
         <sources>
           <source>src/java/core</source>
-		</plugins>
+		</plugin>
 	</build>
 	<reporting>
 				<plugin>
