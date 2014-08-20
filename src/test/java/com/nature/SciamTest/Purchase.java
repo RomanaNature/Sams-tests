@@ -26,7 +26,7 @@ public class Purchase {
 		//driver = new RemoteWebDriver(new URL("localhost:4444/wd/hub"), capability);
 		
 		FirefoxProfile profile = new FirefoxProfile(); 
-		FirefoxBinary binary = new FirefoxBinary(new File("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe")); 
+		FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/firefox/firefox.exe")); 
 		driver = new FirefoxDriver(binary, profile);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
