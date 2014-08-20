@@ -18,17 +18,14 @@ public class Purchase {
 
 	@Before
 	public void setUp() throws Exception {
-		//DesiredCapabilities capability = DesiredCapabilities.firefox();
-		//capability.setCapability("platform", Platform.ANY);
+		DesiredCapabilities capability = DesiredCapabilities.firefox();
+		capability.setCapability("platform", Platform.ANY);
 		//capability.setCapability("binary", "/ms/dist/fsf/PROJ/firefox/16.0.0/bin/firefox"); //for linux
 
-		//capability.setCapability("binary", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"); //for windows                
-		//driver = new RemoteWebDriver(new URL("localhost:4444/wd/hub"), capability);
+		capability.setCapability("binary", "/usr/bin/firefox/firefox.exe"); //for windows                
+		driver = new FirefoxDriver(capability);
 		
-		FirefoxProfile profile = new FirefoxProfile(); 
-		FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/firefox/firefox.exe")); 
-		driver = new FirefoxDriver(binary, profile);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@Test
