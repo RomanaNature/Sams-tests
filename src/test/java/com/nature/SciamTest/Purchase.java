@@ -1,15 +1,14 @@
-package com.nature.SciamTest;
 
-import java.io.File;
+	package com.nature.SciamTest;
+
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxBinary;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Purchase {
@@ -23,14 +22,13 @@ public class Purchase {
 		capability.setCapability("platform", Platform.ANY);
 		//capability.setCapability("binary", "/ms/dist/fsf/PROJ/firefox/16.0.0/bin/firefox"); //for linux
 
-		capability.setCapability("binary", "/usr/bin/firefox/firefox.exe"); //for windows                
-		driver = new FirefoxDriver(capability);
-		
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		capability.setCapability("binary", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"); //for windows                
+		driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capability);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@Test
-	public void testPurchase() throws Exception {
+	public void testFirefox() throws Exception {
 		// driver.get(baseUrl +
 		// "/store/subscribe/scientific-american-digital/?responseKey=");
 		driver.manage().window().maximize();
@@ -133,3 +131,4 @@ public class Purchase {
 		}
 	}
 }
+
