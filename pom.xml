@@ -24,6 +24,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
       <scope>test</scope>
     </dependency>
     <dependency>
+    
+ 
     			<groupId>xml-apis</groupId>
     			<artifactId>xml-apis</artifactId>
    				<version>1.4.01</version>
@@ -40,6 +42,17 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 					</exclusion>		
 				</exclusions>
 			</dependency>
+			   <plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>exec-maven-plugin</artifactId>
+  <version>1.1</version>
+  <executions><execution>
+    <goals><goal>java</goal></goals>
+  </execution></executions>
+  <configuration>
+    <mainClass>org.dhappy.test.NeoTraverse</mainClass>
+  </configuration>
+</plugin>
     </dependencies>
   
 
