@@ -49,6 +49,7 @@ public void setUp() throws Exception {
     FirefoxProfile profile = new FirefoxProfile(); 
     profile.setPreference("network.http.phishy-userpass-length", 255); 
     driver.get("https://web:guest@test-www.scientificamerican.com/store/subscribe/scientific-american-digital/?responseKey="); 
+    Assert.assertEquals("Not the proper status code!", 200, Integer.parseInt(driver.findElement(By.id("web_response")).getAttribute("content")));
     driver.findElement(By.xpath("//*[@id='SAD']/div/p/img[2]")).click();
     Thread.sleep(5000);
     driver.findElement(By.id("firstName")).clear();
