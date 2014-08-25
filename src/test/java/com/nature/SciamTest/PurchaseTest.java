@@ -29,6 +29,7 @@ public class PurchaseTest {
 		FirefoxProfile profile = new FirefoxProfile();
 		profile.setPreference("network.http.phishy-userpass-length", 255);
 		driver.get("https://web:guest@test-www.scientificamerican.com/store/subscribe/scientific-american-digital/?responseKey=");
+		System.out.println(driver.getPageSource());
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@id='SAD']/div/p/img[2]")).click();
 		// driver.findElement(By.name("selectRegion")).click();
